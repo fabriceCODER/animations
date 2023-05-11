@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .wrapper {
+            overflow: visible;
+            perspective: 800px;
+            display: flex;
+            flex-direction: row;
+            width: 1000px;
+            height: 400px;
+            border-radius: 40px;
+
+        }
+
+        .wrapper2 {
+            transform: scaleX(-1);
+        }
+
+        .paper {
+            width: 50px;
+            height: 70px;
+            background-color: rgb(163, 158, 2);
+            position: relative;
+            /* left: 0; */
+            animation: fall linear infinite;
+        }
+
+        .paper:before {
+            transform: rotateX(45deg) translateZ(10px);
+        }
+
+        .paper:after {
+            transform: rotateY(-45deg) translateZ(10px);
+        }
+
+        .paper:nth-child(2),
+        .paper:nth-child(11) {
+            animation-duration: 4.5s;
+        }
+
+        .paper:nth-child(3),
+        .paper:nth-child(12) {
+            animation-duration: 4s;
+        }
+
+        .paper:nth-child(4),
+        .paper:nth-child(13) {
+            animation-duration: 3.5s;
+        }
+
+        .paper:nth-child(5),
+        .paper:nth-child(14) {
+            animation-duration: 3s;
+        }
+
+        .paper:nth-child(6),
+        .paper:nth-child(15) {
+            animation-duration: 2.5s;
+        }
+
+        .paper:nth-child(7),
+        .paper:nth-child(16) {
+            animation-duration: 2s;
+        }
+
+        .paper:nth-child(8),
+        .paper:nth-child(17) {
+            animation-duration: 1.5s;
+        }
+
+        .paper:nth-child(9),
+        .paper:nth-child(18) {
+            animation-duration: 1s;
+        }
+
+        .paper:nth-child(10),
+        .paper:nth-child(19) {
+            animation-duration: 4.5s;
+        }
+
+        .paper:nth-child(1),
+        .paper:nth-child(20) {
+            animation-duration: 3s;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -80px;
+                transform: rotateY(0);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                top: 400px;
+                transform: rotateX(180deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+    </div>
+    <div class="wrapper wrapper2">
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+    </div>
+
+</body>
+
+</html>
